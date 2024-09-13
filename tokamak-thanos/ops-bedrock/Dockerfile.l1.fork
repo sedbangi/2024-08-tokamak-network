@@ -1,9 +1,0 @@
-FROM ghcr.io/foundry-rs/foundry:nightly-de33b6af53005037b463318d2628b5cfcaf39916
-
-RUN apk add --no-cache jq
-RUN apk add --update python3 py3-pip
-
-COPY entrypoint-fork-l1.sh /entrypoint.sh
-COPY fork-public-network.py /main.py
-
-ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]
